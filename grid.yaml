@@ -6,11 +6,15 @@ services:
     shm_size: '2g'
     depends_on:
     - hub
+    deploy:
+      replicas: 1
     env_file: .env
   firefox:
     image: selenium/node-firefox:153.0-20260808
     shm_size: '2g'
     depends_on:
     - hub
+    deploy:
+      replicas: 1
     env_file: .env
    
